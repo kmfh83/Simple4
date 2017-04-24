@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tools:LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="app.noti.simple4.Pop1"
+    android:gravity="center_horizontal">
+
+
+<TimePicker
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/timePicker"/>
+
+<TextView
+    android:layout_width="200dp"
+    android:layout_height="wrap_content"
+    android:id="@+id/TextView_Time"
+    android:gravity="center_horizontal"
+    android:text="clock" />
+<Button
+    android:layout_width="200dp"
+    android:layout_height="50dp"
+    android:text="Alarm On"
+    android:id="@+id/setalarm"/>
+
+
+</tools:LinearLayout>

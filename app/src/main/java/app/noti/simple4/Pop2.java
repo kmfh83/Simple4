@@ -20,6 +20,7 @@ public class Pop2 extends AppCompatActivity {
     int hour,minuts;
     Button setalarm;
     TextView TextView_Time;
+    Calendar calendar;
 
 
     @Override
@@ -30,7 +31,7 @@ public class Pop2 extends AppCompatActivity {
 //        Intent service = new Intent(getApplicationContext(),MyIntentService.class);
 //        startService(service);
 
-        final Calendar calendar = Calendar.getInstance();
+        calendar = Calendar.getInstance();
         TextView_Time = (TextView)findViewById(R.id.TextView_Time);
 
         timePicker = (TimePicker)findViewById(R.id.timePicker);
@@ -69,16 +70,14 @@ public class Pop2 extends AppCompatActivity {
 
                 sharedEditor.apply();
 //
-////        seend(getApplicationContext());
+////
                 SharedPreferences shared = getSharedPreferences("Azkartime", Context.MODE_PRIVATE);
                 Long time_nig = shared.getLong("night",0);
 //
                 Log.e("gg time ", String.valueOf(time_nig));
                 Intent service = new Intent(getApplicationContext(),MyIntentService.class);
-                service.putExtra("nig",time_nig);
+                service.putExtra("night",time_nig);
                 startService(service);
-//                AlarmManager manager = (AlarmManager)getSystemService(ALARM_SERVICE);
-//                manager.setRepeating(AlarmManager.RTC_WAKEUP,calendar.getTimeInMillis(),AlarmManager.INTERVAL_DAY, PendingIntent.getBroadcast(getApplicationContext(),0,i,PendingIntent.FLAG_UPDATE_CURRENT));
 
 
 
@@ -116,6 +115,8 @@ public class Pop2 extends AppCompatActivity {
     private void set_alarm_time(String x) {
         TextView_Time.setText(x);
     }
+
+
 
 
 }

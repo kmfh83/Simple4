@@ -77,7 +77,7 @@ public class Pop1 extends AppCompatActivity {
 //
                 Log.e("gg time ", String.valueOf(time_mor));
                 Intent service = new Intent(getApplicationContext(),MyIntentService.class);
-                service.putExtra("mor",time_mor);
+                service.putExtra("morning",time_mor);
                 startService(service);
 //                AlarmManager manager = (AlarmManager)getSystemService(ALARM_SERVICE);
 //                manager.setRepeating(AlarmManager.RTC_WAKEUP,calendar.getTimeInMillis(),AlarmManager.INTERVAL_DAY, PendingIntent.getBroadcast(getApplicationContext(),0,i,PendingIntent.FLAG_UPDATE_CURRENT));
@@ -112,7 +112,7 @@ public class Pop1 extends AppCompatActivity {
         int width = dm.widthPixels;
         int height = dm.heightPixels;
 
-        getWindow().setLayout((int)(width*.9),(int)(height*.6));
+        getWindow().setLayout((int)(width*.9),(int)(height*.90));
     }
 
     private void set_alarm_time(String x) {

@@ -37,9 +37,9 @@ public class MyIntentService extends IntentService {
             intent = new Intent(getApplicationContext(),Reseverr.class);
             intent.setType("mor");
 
-            AlarmManager manager = (AlarmManager)getSystemService(ALARM_SERVICE);
+            AlarmManager manager1 = (AlarmManager)getSystemService(ALARM_SERVICE);
 
-            manager.setRepeating(AlarmManager.RTC_WAKEUP,time_mor,AlarmManager.INTERVAL_DAY, PendingIntent.getBroadcast(getApplicationContext(),1,intent,PendingIntent.FLAG_UPDATE_CURRENT));
+            manager1.setRepeating(AlarmManager.RTC_WAKEUP,time_mor,AlarmManager.INTERVAL_DAY, PendingIntent.getBroadcast(getApplicationContext(),1,intent,PendingIntent.FLAG_UPDATE_CURRENT));
 
             Log.e("onHandleIntent ","time_mor now");
             Log.e("onHandleIntent ", String.valueOf(time_mor));
@@ -51,9 +51,9 @@ public class MyIntentService extends IntentService {
             intent = new Intent(getApplicationContext(),Reseverr.class);
             intent.setType("nig");
 
-            AlarmManager manager = (AlarmManager)getSystemService(ALARM_SERVICE);
+            AlarmManager manager2 = (AlarmManager)getSystemService(ALARM_SERVICE);
 
-            manager.setRepeating(AlarmManager.RTC_WAKEUP,time_nig,AlarmManager.INTERVAL_DAY, PendingIntent.getBroadcast(getApplicationContext(),2,intent,PendingIntent.FLAG_UPDATE_CURRENT));
+            manager2.setRepeating(AlarmManager.RTC_WAKEUP,time_nig,AlarmManager.INTERVAL_DAY, PendingIntent.getBroadcast(getApplicationContext(),2,intent,PendingIntent.FLAG_UPDATE_CURRENT));
 
             Log.e("onHandleIntent ","time_nig now");
             Log.e("onHandleIntent ", String.valueOf(time_nig));

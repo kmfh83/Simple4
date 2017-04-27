@@ -109,7 +109,7 @@ public class Pop2 extends AppCompatActivity {
         int width = dm.widthPixels;
         int height = dm.heightPixels;
 
-        getWindow().setLayout((int)(width*.9),(int)(height*.6));
+        getWindow().setLayout((int)(width*.9),(int)(height*.9));
     }
 
     private void set_alarm_time(String x) {
